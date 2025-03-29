@@ -67,7 +67,7 @@ export default function Home() {
             >
               <a  href="/myresume.pdf"
                 download
-                className="bg-[#26abff] text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium shadow-lg hover:bg-[#1e97e6] hover:scale-105 transition-all duration-300 flex items-center gap-2 w-fit"
+                className="bg-[#26abff] text-gray-800 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium shadow-lg hover:bg-[#1e97e6] hover:scale-105 transition-all duration-300 flex items-center gap-2 w-fit"
               >
                 <span>DOWNLOAD RESUME</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -113,13 +113,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="relative h-[280px] sm:h-[400px] lg:h-[500px] w-full lg:flex-1 order-first lg:order-last"
           >
-            <div className="relative h-full flex items-center justify-center">
+            <div className="relative flex items-center h-full justify-center">
               <Image 
               width={350}
               height={350}
                 src={myimage}
                 alt="Shiv Panchal"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[70%] sm:max-w-[75%] lg:max-w-[80%] h-auto object-contain"
+                className="object-contain absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[70%] sm:max-w-[75%] lg:max-w-[80%] h-auto object-contain"
               />
             </div>
           </motion.div>
