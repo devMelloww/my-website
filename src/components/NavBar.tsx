@@ -1,11 +1,13 @@
-"use client"
-import React, { useState, useCallback } from 'react';
+"use client";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
-import Link from 'next/link';
-import mylogo from '../assets/mylogo/mylogo.png';
+import Link from "next/link";
+import mylogo from "../assets/mylogo/mylogo.png";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -25,12 +27,7 @@ const NavBar = () => {
         <div className="text-xl sm:text-2xl font-bold relative group">
           <div className="absolute -inset-2 bg-[#26abff] opacity-0 group-hover:opacity-20 blur-xl rounded-full transition-all duration-300 ease-in-out"></div>
           <div className="flex hover:scale-105 transition-all duration-300 ease-in-out items-center relative">
-            <Image
-              src={mylogo}
-              alt='logo'
-              width={90}
-              height={100}
-            />
+            <Image src={mylogo} alt="logo" width={80} height={80} />
           </div>
         </div>
 
@@ -39,16 +36,20 @@ const NavBar = () => {
             <li key={index} className="relative group">
               <Link
                 href={item.path}
-                className="hover:text-[#26abff] transition cursor-pointer"
+                className={`hover:text-accent transition cursor-pointer ${
+                  pathname === item.path ? "text-accent transition" : ""
+                }`}
               >
                 {item.label}
               </Link>
-              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-[#26abff] group-hover:w-full transition-all"></span>
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-accent group-hover:w-full transition-all"></span>
             </li>
           ))}
-          <button className="bg-[#26abff] text-black px-5 py-2 rounded-full font-medium shadow-lg hover:bg-[#1e97e6] transition cursor-pointer">
-            Hire me
-          </button>
+          <Link href={"/contact"}>
+            <button className="bg-accent text-black px-5 py-2 rounded-full font-medium shadow-lg hover:bg-[#1e97e6] transition cursor-pointer">
+              Hire me
+            </button>
+          </Link>
         </ul>
         {/* Mobile Menu Button */}
         <button
@@ -82,36 +83,46 @@ const NavBar = () => {
         }`}
       >
         <div className="flex justify-end p-4">
-          <button onClick={() => setIsMenuOpen(false)} className="focus:outline-none">
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="focus:outline-none"
+          >
             <svg
               className="h-6 w-6 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
         <div className="h-full flex flex-col justify-center items-center space-y-6">
           {/* Moved the logo here and added text-center class */}
+          <div className="pb-8 text-center">
+            {" "}
+            {/* Reduced padding-bottom */}
+            <Image src={mylogo} alt="logo" width={80} height={80} />
+          </div>
           <ul className="space-y-4 text-lg font-medium text-center">
             {navItems.map((item, index) => (
               <li key={index} className="relative">
                 <Link
                   href={item.path}
-                  className="block py-2 hover:text-[#26abff] transition cursor-pointer"
+                  className={`block py-2 hover:text-accent transition cursor-pointer ${
+                    pathname === item.path ? "w-55 text-gray-800 bg-accent" : ""
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li>
-              <button className="bg-[#26abff] text-black px-6 py-3 rounded-full font-medium shadow-lg hover:bg-[#1e97e6] transition cursor-pointer">
-                Hire me
-              </button>
-            </li>
           </ul>
         </div>
       </div>

@@ -224,7 +224,7 @@ const ResumePage = () => {
             <button
               className={`w-full px-4 py-3 cursor-pointer font-bold rounded text-center ${
                 activeSection === "Experience"
-                  ? "bg-accent text-gray-700"
+                  ? "bg-accent text-gray-800"
                   : "bg-tabs"
               }`}
               onClick={() => setActiveSection("Experience")}
@@ -234,7 +234,7 @@ const ResumePage = () => {
             <button
               className={`w-full px-4 py-3 cursor-pointer font-bold rounded text-center ${
                 activeSection === "Education"
-                  ? "bg-accent text-gray-700"
+                  ? "bg-accent text-gray-800"
                   : "bg-tabs"
               }`}
               onClick={() => setActiveSection("Education")}
@@ -244,7 +244,7 @@ const ResumePage = () => {
             <button
               className={`w-full px-4 py-3 cursor-pointer font-bold rounded text-center ${
                 activeSection === "Skills"
-                  ? "bg-[#26abff] text-gray-700"
+                  ? "bg-accent text-gray-800"
                   : "bg-tabs"
               }`}
               onClick={() => setActiveSection("Skills")}
@@ -254,7 +254,7 @@ const ResumePage = () => {
             <button
               className={`w-full px-4 py-3 cursor-pointer font-bold rounded text-center ${
                 activeSection === "About me"
-                  ? "bg-[#26abff] text-gray-700"
+                  ? "bg-accent text-gray-800"
                   : "bg-tabs"
               }`}
               onClick={() => setActiveSection("About me")}
