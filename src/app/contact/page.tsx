@@ -26,7 +26,7 @@ const contact = () => {
                 <Linkedin className="text-accent w-8 h-8" />
               </div>
               <div className="flex flex-col ml-2">
-                <span className="text-sm">LinkedIn</span>
+                <span className="text-sm font-bold">LinkedIn</span>
                 <p>
                   <a
                     className="text-gray-400 hover:underline"
@@ -49,7 +49,7 @@ const contact = () => {
                 <Mail className="text-accent w-8 h-8" />
               </div>
               <div className="flex flex-col ml-2">
-                <span className="text-sm">Email</span>
+                <span className="text-sm font-bold">Email</span>
                 <p>
                   <a
                     href="mailto:shivpanchal1114@gmail.com"
@@ -72,7 +72,7 @@ const contact = () => {
                 <GitHub className="text-accent w-8 h-8" />
               </div>
               <div className="flex flex-col ml-2">
-                <span className="text-sm">GitHub</span>
+                <span className="text-sm font-bold">GitHub</span>
                 <p>
                   <a
                     href="https://github.com/devMelloww"
