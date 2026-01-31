@@ -27,9 +27,21 @@ const ExperienceContent = () => (
       on creating clean, efficient, and scalable code.
     </p>
     <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-4 items-center md:items-start justify-center md:justify-start">
-      <Card
-        startDate="2024"
+       <Card
+        startDate="Nov 2025"
         endDate="Present"
+        title="Software Engineer Internship"
+        company="San Luis Obispo County"
+      />
+       <Card
+        startDate="July 2025"
+        endDate="Sept 2025"
+        title="Product Strategist | AI Researcher | QA Tester"
+        company="FastExpert Inc."
+      />
+      <Card
+        startDate="Dec 2024"
+        endDate="Nov 2025"
         title="Full Stack Developer (Volunteer)"
         company="Cat Guardians TNR & Rescue"
       />

@@ -86,7 +86,7 @@ export default function Home() {
                 </a>
 
                 <a 
-                  href="https://linkedin.com/in/spanch02" 
+                  href="https://linkedin.com/in/spanch26" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="border-2 border-dashed border-[#26abff] rounded-full p-2 text-[#26abff] hover:border-white hover:text-white transition-colors duration-300 flex items-center justify-center cursor-pointer"
